@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  text-align: center;
+  margin: 5vh 0;
+}
+
+header h1 {
+  margin-bottom: 1vh;
+}
+
+select {
+  width: 100%;
+  border: 0px;
+  color: white;
+  background-color: #2980b9;
+  height: 10vh;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.shape {
+  border: 0px;
+  background-color: white;
+  color: black;
+  font-size: 2vh;
+}
+
+.title h1 {
+  text-align: center;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  margin: 1vh 0;
+}
+
+.img img {
+  width: 100%;
+}
+
+.calc {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+
+.rumus {
+  font-weight: bold;
+  text-align: center;
+}
+
+.content {
+  margin: 5vh 0;
+  border: 1px solid #2980b9;
+  border-radius: 10px;
+}
+
+.info {
+  padding: 0 5vw;
+}
+
+.content .title {
+  background-color: #2980b9;
+  color: white;
+  padding: 1vh 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 0.5vh;
+}
+
+.content hr {
+  margin: 3vh 0;
+}
+
+.form {
+  margin: 3vh 0;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.input input {
+  width: 100%;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.form .btn button {
+  padding: 1vh 2vw;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.form .hitung {
+  display: flex;
+  justify-content: center;
+}
+
+.form .reset {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hitung button {
+  background-color: #2980b9;
+}
+
+.reset button {
+  background-color: rgb(227, 189, 0);
+}
