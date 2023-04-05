@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Katik by Kesya Amanda</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -16,12 +16,10 @@
         keliling bangun datar
       </p>
     </header>
-    <nav>
-      <select name="shapes" id="shape">
-        <option class="shape" value="1">Segitiga</option>
-        <option class="shape" value="2">Jajar Genjang</option>
-      </select>
-    </nav>
+    <div class="nav">
+      <p id="segitiga" class="active">Segitiga</p>
+      <p id="jajar">Jajar Genjang</p>
+    </div>
 
     <div class="calc segitiga">
       <div class="content luas">
@@ -30,7 +28,7 @@
         </div>
         <div class="info">
           <div class="img">
-            <img src="../assets/segitiga.jpg" alt="" />
+            <img src="./assets/segitiga.jpg" alt="" />
           </div>
           <p>Rumus Luas Segitiga yaitu :</p>
           <p class="rumus">L = 1/2 x a x t</p>
@@ -43,28 +41,20 @@
             <h2>Hitung Luas Segitiga</h2>
           </div>
           <div class="form">
-            <form action="">
+            <form action="" id="form-luas-segitiga">
               <div class="input">
-                <input
-                  type="number"
-                  name="alas"
-                  id="alas"
-                  placeholder="Nilai Alas"
-                />
+                <input type="number" name="alas" placeholder="Nilai Alas" />
               </div>
               <div class="input">
-                <input
-                  type="number"
-                  name="tinggi"
-                  id="tinggi"
-                  placeholder="Nilai Tinggi"
-                />
+                <input type="number" name="tinggi" placeholder="Nilai Tinggi" />
               </div>
+              <div class="error-luas-segitiga"></div>
               <div class="btn hitung">
                 <button type="submit">Hitung</button>
               </div>
+              <div class="result result-luas-segitiga"></div>
               <div class="btn reset">
-                <button type="button">Reset</button>
+                <button id="reset-luas-segitiga" type="button">Reset</button>
               </div>
             </form>
           </div>
@@ -90,41 +80,115 @@
             <h2>Hitung Keliling Segitiga</h2>
           </div>
           <div class="form">
-            <form action="">
+            <form action="" id="form-keliling-segitiga">
               <div class="input">
-                <input
-                  type="number"
-                  name="a"
-                  id="a"
-                  placeholder="Nilai Sisi A"
-                />
+                <input type="number" name="a" placeholder="Nilai Sisi A" />
               </div>
               <div class="input">
-                <input
-                  type="number"
-                  name="b"
-                  id="b"
-                  placeholder="Nilai Sisi B"
-                />
+                <input type="number" name="b" placeholder="Nilai Sisi B" />
               </div>
               <div class="input">
-                <input
-                  type="number"
-                  name="c"
-                  id="c"
-                  placeholder="Nilai Sisi C"
-                />
+                <input type="number" name="c" placeholder="Nilai Sisi C" />
               </div>
+              <div class="error-keliling-segitiga"></div>
               <div class="btn hitung">
                 <button type="submit">Hitung</button>
               </div>
+              <div class="result result-keliling-segitiga"></div>
               <div class="btn reset">
-                <button type="button">Reset</button>
+                <button id="reset-keliling-segitiga" type="button">
+                  Reset
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="calc jajargenjang none">
+      <div class="content luas">
+        <div class="title">
+          <h2>Luas Jajar Genjang</h2>
+        </div>
+        <div class="info">
+          <div class="img">
+            <img src="./assets/jajar-genjang.jpg" alt="" />
+          </div>
+          <p>Rumus Luas Jajar Genjang yaitu :</p>
+          <p class="rumus">L = a x t</p>
+          <p>Di mana :</p>
+          <p>L = Luas</p>
+          <p>a = Panjang Alas</p>
+          <p>t = Tinggi</p>
+          <hr />
+          <div>
+            <h2>Hitung Luas Jajar Genjang</h2>
+          </div>
+          <div class="form">
+            <form action="" id="form-luas-jg">
+              <div class="input">
+                <input type="number" name="alas" placeholder="Nilai Alas" />
+              </div>
+              <div class="input">
+                <input type="number" name="tinggi" placeholder="Nilai Tinggi" />
+              </div>
+              <div class="error-luas-jg"></div>
+              <div class="btn hitung">
+                <button type="submit">Hitung</button>
+              </div>
+              <div class="result result-luas-jg"></div>
+              <div class="btn reset">
+                <button id="reset-luas-jg" type="button">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="content keliling">
+        <div class="title">
+          <h2>Keliling Jajar Genjang</h2>
+        </div>
+        <div class="info">
+          <div class="img">
+            <img src="./assets/jajar-genjang.jpg" alt="" />
+          </div>
+          <p>Rumus Keliling Jajar Genjang yaitu :</p>
+          <p class="rumus">K = 2 (a + m)</p>
+          <p>Di mana :</p>
+          <p>K = Keliling</p>
+          <p>a = Alas</p>
+          <p>m = Sisi Miring</p>
+          <hr />
+          <div>
+            <h2>Hitung Keliling Jajar Genjang</h2>
+          </div>
+          <div class="form">
+            <form action="" id="form-keliling-jg">
+              <div class="input">
+                <input type="number" name="a" placeholder="Nilai Alas" />
+              </div>
+              <div class="input">
+                <input type="number" name="m" placeholder="Nilai Sisi Miring" />
+              </div>
+              <div class="error-keliling-jg"></div>
+              <div class="btn hitung">
+                <button type="submit">Hitung</button>
+              </div>
+              <div class="result result-keliling-jg"></div>
+              <div class="btn reset">
+                <button id="reset-keliling-jg" type="button">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by Kesya Wijaya</p>
+    </footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
